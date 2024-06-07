@@ -1,5 +1,5 @@
 import { DataTypes, Model } from 'sequelize';
-import sequelize from '../config/database';
+import sequelize from '../initializers/database';
 import { IProduct, IProductCreationAttributes } from '../types/Product';
 
 class Product extends Model<IProduct, IProductCreationAttributes>
@@ -45,6 +45,7 @@ Product.init(
   {
     sequelize,
     tableName: 'products',
+    paranoid: true,
   }
 );
 

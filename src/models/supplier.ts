@@ -1,5 +1,5 @@
 import { DataTypes, Model } from 'sequelize';
-import sequelize from '../config/database';
+import sequelize from '../initializers/database';
 import { ISupplier, ISupplierCreationAttributes } from '../types/Supplier';
 
 class Supplier extends Model<ISupplier, ISupplierCreationAttributes>
@@ -31,6 +31,7 @@ Supplier.init(
   {
     sequelize,
     tableName: 'suppliers',
+    paranoid: true,
   }
 );
 

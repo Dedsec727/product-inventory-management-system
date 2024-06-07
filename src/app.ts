@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import productRoutes from './routes/product';
 import supplierRoutes from './routes/supplier';
-import sequelize from './config/database';
+import sequelize from './initializers/database';
 import { ErrorHandler } from './middlewares/errorHandler';
 
 const app = express();
